@@ -1,0 +1,48 @@
+# IPython log file
+
+# Tue, 17 Dec 2019 12:36:45
+def validate():
+    guess = '1'
+    answer = 'hangman word'
+    while guess not in answer:
+        guess = raw_input ('Name a letter in \'' + answer + '\': ')
+   print('Thank You!')# Tue, 17 Dec 2019 12:36:51
+def validate():
+    guess = '1'
+    answer = 'hangman word'
+    while guess not in answer:
+        guess = raw_input ('Name a letter in \'' + answer + '\': ')
+    print('Thank You!')# Tue, 17 Dec 2019 12:42:30
+from __future__ import print_function
+import random
+
+def guess_winner(players=('Amy', 'Bill', 'Cathy', 'Dale')):
+    '''Summarize the function in this doctsring.
+    
+    Provide descriptions for the arguments and say what type each one is.
+    Describe the type and meeaning of the value returned
+    '''
+    winner = random.choice(players)
+    
+    print('GUess which of these people won the lottery: ',end='')
+    for p in players[:len(players)-1]:
+        print(p+', ', end+'')
+    print(players[len(players)-1])
+    
+    guesses = 1
+    while raw_input() != winner:
+        print('GUess again!')
+        guesses += 1
+    print('You guessed in', guesses, 'guesses!')
+    return guesses# Tue, 17 Dec 2019 12:46:26
+def goguess(numbers=(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)):
+    winner = random.choice(numbers)
+    print('I have a number between 1 and 20 what is it?: ',end='')
+
+    guesses = 1
+    while input() != winner:
+        print('Guess again!')
+        guesses += 1
+    print('guesses')
+# Tue, 17 Dec 2019 12:46:36
+goguess()
